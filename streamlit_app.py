@@ -32,7 +32,7 @@ smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" 
 #st.text(smoothiefroot_response.json())
 sf_df = st.dataframe(data=smoothiefroot_response.json(), width='stretch')
 
-    #my_insert_stmt = """ INSERT INTO smoothies.public.orders(ingredients, name_on_order)  values ('""" + ingredients_string + """','""" + name_on_order + """')"""
+    my_insert_stmt = """ INSERT INTO smoothies.public.orders(ingredients, name_on_order)  values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
     time_to_insert = st.button('Submit Order')
     if time_to_insert:
