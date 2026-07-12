@@ -43,7 +43,8 @@ if ingredients_list:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"  + fruit_chosen)
 
     st.dataframe(
-        data=smoothiefroot_response.json(),
+        #data=smoothiefroot_response.json(),
+		 data=fruityvice_response.json();
         use_container_width=True
     )
 
