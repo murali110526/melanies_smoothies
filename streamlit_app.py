@@ -32,9 +32,7 @@ ingredients_list = st.multiselect('Choose up to 5 ingredients:', my_dataframe,ma
 if ingredients_list:
     ingredients_string = ''
 
-    for fruit_chosen in ingredients_list:
-
-    for fruit_chosen in ingredients_list:
+	for fruit_chosen in ingredients_list:
 
     search_on = pd_df.loc[
         pd_df['FRUIT_NAME'] == fruit_chosen,
