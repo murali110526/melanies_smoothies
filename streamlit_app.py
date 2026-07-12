@@ -40,7 +40,7 @@ fruityvice_response = requests.get(
 f"https://fruityvice.com/api/fruit/{search_on}"
 )
     st.dataframe(data=fruityvice_response.json(), use_container_width=True)
-	
+    
       my_insert_stmt = """ INSERT INTO smoothies.public.orders(ingredients, name_on_order)
             values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
@@ -48,4 +48,4 @@ f"https://fruityvice.com/api/fruit/{search_on}"
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!', icon="✅")
-		
+        
