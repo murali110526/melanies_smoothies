@@ -44,7 +44,7 @@ if ingredients_list:
 
     st.dataframe(
         #data=smoothiefroot_response.json(),
-		 data=fruityvice_response.json();
+		 data=fruityvice_response.json(),
         use_container_width=True
     )
 
